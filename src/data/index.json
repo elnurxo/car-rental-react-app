@@ -1,0 +1,167 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2020,
+      "type": "sedan",
+      "pricePerDay": 45,
+      "availability": true,
+      "imageUrl": "https://scene7.toyota.eu/is/image/toyotaeurope/cors0005a_web_2023:Medium-Landscape?ts=1708962012070&resMode=sharp2&op_usm=1.75,0.3,2,0"
+    },
+    {
+      "id": "2",
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "type": "suv",
+      "pricePerDay": 95,
+      "availability": true,
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/p90495464-1677001974.jpg?crop=0.720xw:0.608xh;0.250xw,0.329xh&resize=1200:*"
+    },
+    {
+      "id": "3",
+      "brand": "Tesla new",
+      "model": "Model 3",
+      "year": 2023,
+      "type": "electric",
+      "pricePerDay": 120,
+      "availability": true,
+      "imageUrl": "https://media.ed.edmunds-media.com/tesla/model-3/2025/oem/2025_tesla_model-3_sedan_long-range_fq_oem_1_1280.jpg"
+    },
+    {
+      "id": "da52",
+      "brand": "Honda",
+      "model": "CR-V",
+      "year": 2022,
+      "type": "crossover",
+      "pricePerDay": 60,
+      "availability": true,
+      "imageUrl": "https://di-uploads-pod36.dealerinspire.com/patriothonda/uploads/2021/12/2022-Honda-CR-V.jpg"
+    },
+    {
+      "id": "59bf",
+      "brand": "Ford",
+      "model": "F-150",
+      "year": 2021,
+      "type": "minivan",
+      "pricePerDay": 70,
+      "availability": true,
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/2021-ford-f-150-hybrid-lariat-117-1605761615.jpg?crop=0.893xw:0.752xh;0.0481xw,0.173xh&resize=2048:*"
+    },
+    {
+      "id": "4f44",
+      "brand": "Mercedes-Benz",
+      "model": "C-Class",
+      "year": 2023,
+      "type": "sedan",
+      "pricePerDay": 90,
+      "availability": false,
+      "imageUrl": "https://media.ed.edmunds-media.com/mercedes-benz/c-class/2023/oem/2023_mercedes-benz_c-class_sedan_amg-c-43_fq_oem_1_1600.jpg"
+    },
+    {
+      "id": "f0e5",
+      "brand": "BMW",
+      "model": "528i",
+      "year": 2016,
+      "type": "sedan",
+      "pricePerDay": 55,
+      "availability": true,
+      "imageUrl": "https://media.ed.edmunds-media.com/bmw/5-series/2016/oem/2016_bmw_5-series_sedan_535d_fq_oem_1_1600.jpg"
+    },
+    {
+      "id": "0af1",
+      "brand": "Opel",
+      "model": "Astra",
+      "year": 2006,
+      "type": "hatchback",
+      "pricePerDay": 30,
+      "availability": true,
+      "imageUrl": "https://s.auto.drom.ru/i24198/c/photos/fullsize/opel/astra/opel_astra_536792.jpg"
+    },
+    {
+      "id": "7e34",
+      "brand": "Porsche",
+      "model": "911 gt3 rs",
+      "year": 2021,
+      "type": "sports-car",
+      "pricePerDay": 170,
+      "availability": true,
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/2019-porsche-911-gt3-rs-placement-1524749910.jpg?crop=0.8148148148148148xw:1xh;center,top&resize=1200:*"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "password123",
+      "profileImage": "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "role": "client",
+      "phone": "+123456789",
+      "isBanned": true,
+      "favorites": [],
+      "banUntil": "2025-06-11T17:04:13.711Z",
+      "balance": 20,
+      "registeredAt": "2024-01-15"
+    },
+    {
+      "id": "a6fa",
+      "fullName": "Elnur Khalilov",
+      "email": "elnur@gmail.com",
+      "password": "Elnur123!",
+      "profileImage": "https://static01.nyt.com/images/2013/06/16/arts/16MONSTER_SPAN/16MONSTER_SPAN-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "role": "client",
+      "isBanned": false,
+      "favorites": [
+        "2",
+        "7e34"
+      ],
+      "banUntil": null,
+      "phone": "+994554753075",
+      "balance": 260,
+      "registeredAt": "2025-06-05T13:09:59.526Z"
+    },
+    {
+      "id": "3",
+      "fullName": "Elmir Babayev",
+      "password": "password123",
+      "profileImage": "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "email": "elmir@gmail.com",
+      "isBanned": false,
+      "favorites": [],
+      "banUntil": null,
+      "role": "admin",
+      "balance": 950,
+      "phone": "+111222333",
+      "registeredAt": "2023-12-01"
+    }
+  ],
+  "rentals": [
+    {
+      "id": "0860",
+      "userId": "a6fa",
+      "carId": "2",
+      "carName": "BMW X5",
+      "rentalDate": "2025-06-25",
+      "returnDate": "2025-06-27",
+      "date": "2025-06-11T11:06:14.203Z",
+      "status": "booked",
+      "totalPrice": 190,
+      "days": 2
+    },
+    {
+      "id": "b3b6",
+      "userId": "a6fa",
+      "carId": "da52",
+      "carName": "Honda CR-V",
+      "rentalDate": "2025-07-07",
+      "returnDate": "2025-07-10",
+      "date": "2025-06-11T11:06:39.808Z",
+      "status": "booked",
+      "totalPrice": 180,
+      "days": 3
+    }
+  ]
+}
