@@ -33,7 +33,7 @@ const AdminCars = () => {
 
   const confirm = async (id) => {
     await controller.delete(endpoints.cars, id);
-    setCars([...cars.filter((c) => c.id !== id)]);
+    setCars([...cars.filter((c) => c?.id !== id)]);
     enqueueSnackbar("Car deleted successfully!", {
       autoHideDuration: 2000,
       variant: "success",
@@ -50,7 +50,7 @@ const AdminCars = () => {
       dataIndex: "imageUrl",
       render: (imageUrl, record) => {
         return (
-          <img width={90} src={imageUrl} key={record.id} alt={record.model} />
+          <img width={90} src={imageUrl} key={record?.id} alt={record.model} />
         );
       },
     },
@@ -211,7 +211,7 @@ const AdminCars = () => {
         values
       );
       setCars((prevCars) => {
-        const idx = prevCars.findIndex((c) => c.id === updatedCar.id);
+        const idx = prevCars.findIndex((c) => c?.id === updatedCar?.id);
         if (idx !== -1) {
           const updatedCars = [...prevCars];
           updatedCars[idx] = updatedCar;
