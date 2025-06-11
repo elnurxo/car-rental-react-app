@@ -10,7 +10,7 @@ import {
 } from "flowbite-react";
 import { Link, NavLink } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../redux/features/userSlice";
+import { logoutUser } from "../../redux/features/userSlice";
 
 const Header = () => {
   const user = useSelector((state) => state.user.user);
@@ -64,7 +64,7 @@ const Header = () => {
                 <DropdownDivider />
                 <DropdownItem
                   onClick={() => {
-                    dispatch(logout());
+                    dispatch(logoutUser());
                     localStorage.setItem("userId", JSON.stringify(null));
                   }}
                 >

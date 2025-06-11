@@ -1,37 +1,37 @@
-// redux/features/userSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: null,
+  isAuthChecked: false,
 };
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    login(state, action) {
+    loginUser(state, action) {
       state.user = action.payload;
+      localStorage.setItem("userId", JSON.stringify(action.payload.id));
+      state.isAuthChecked = true;
     },
-    updateBalance(state, action) {
-      state.user = { ...state.user, balance: action.payload };
+    setUser(state, action) {
+      state.user = action.payload;
+      state.isAuthChecked = true;
+    },
+    logoutUser(state) {
+      state.user = null;
+      localStorage.removeItem("userId");
+      state.isAuthChecked = true;
     },
     updateProfile(state, action) {
       state.user = { ...state.user, ...action.payload };
     },
-    logout(state) {
-      state.user = null;
-      localStorage.setItem("userId", JSON.stringify(null));
-    },
-     loginUser(state, action) {
-      state.user = action.payload;
-    },
-     logoutUser(state) {
-      state.user = null;
-      localStorage.setItem("userId", JSON.stringify(null));
+    updateBalance(state, action) {
+      state.user = { ...state.user, balance: action.payload };
     },
   },
 });
 
-export const { login, logout, updateBalance, updateProfile, loginUser, logoutUser } =
+export const { loginUser, logoutUser, setUser, updateProfile, updateBalance } =
   userSlice.actions;
 export default userSlice.reducer;

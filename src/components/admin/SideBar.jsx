@@ -12,7 +12,7 @@ import controller from "../../services/requests/request";
 import { endpoints } from "../../constants";
 import { Link, useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../redux/features/adminSlice";
+import { logoutAdmin } from "../../redux/features/adminSlice";
 import { enqueueSnackbar } from "notistack";
 import {
   Button,
@@ -89,7 +89,7 @@ const SideBar = () => {
           <Button
             onClick={() => {
               setOpenModal(false);
-              dispatch(logout());
+              dispatch(logoutAdmin());
               localStorage.setItem("adminId", JSON.stringify(null));
               navigate("/admin/login");
               enqueueSnackbar("admin logged out successfully!", {

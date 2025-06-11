@@ -5,7 +5,7 @@ import controller from "../../services/requests/request";
 import { endpoints } from "../../constants";
 import { enqueueSnackbar } from "notistack";
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/features/adminSlice";
+import { loginAdmin } from "../../redux/features/adminSlice";
 import { useNavigate } from "react-router";
 
 const AdminLogin = () => {
@@ -30,7 +30,7 @@ const AdminLogin = () => {
       if (validAdmin) {
         //ok
         console.log("valid admin: ", validAdmin);
-        dispatch(login(validAdmin));
+        dispatch(loginAdmin(validAdmin));
         localStorage.setItem("adminId", JSON.stringify(validAdmin.id));
         navigate("/admin");
         enqueueSnackbar("welcome back admin", {

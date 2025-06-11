@@ -1,30 +1,34 @@
-// redux/features/adminSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   admin: null,
+  isAuthChecked: false,
 };
 
 const adminSlice = createSlice({
   name: "admin",
   initialState,
   reducers: {
-    login(state, action) {
+    loginAdmin(state, action) {
       state.admin = action.payload;
-        state.loading = false;
+      localStorage.setItem("adminId", JSON.stringify(action.payload.id));
+      state.isAuthChecked = true;
     },
-    updateProfile(state, action) {
-      state.admin = { ...state.admin, ...action.payload };
+    setAdmin(state, action) {
+      state.admin = action.payload;
+      state.isAuthChecked = true;
     },
-    logout(state) {
+    logoutAdmin(state) {
       state.admin = null;
-      localStorage.setItem("adminId", JSON.stringify(null));
+      localStorage.removeItem("adminId");
+      state.isAuthChecked = true;
     },
-     loginAdmin(state, action) {
-      state.admin = action.payload;
+    updateAdminProfile(state, action) {
+      state.admin = { ...state.admin, ...action.payload };
     },
   },
 });
 
-export const { login, logout, updateProfile, loginAdmin } = adminSlice.actions;
+export const { loginAdmin, logoutAdmin, setAdmin, updateAdminProfile } =
+  adminSlice.actions;
 export default adminSlice.reducer;

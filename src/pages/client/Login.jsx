@@ -5,7 +5,7 @@ import { enqueueSnackbar } from "notistack";
 import controller from "../../services/requests/request";
 import { endpoints } from "../../constants";
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/features/userSlice";
+import { loginUser } from "../../redux/features/userSlice";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ const Login = () => {
             const user = { ...validUser };
             delete user.password;
             localStorage.setItem("userId", JSON.stringify(user.id));
-            dispatch(login(user));
+            dispatch(loginUser(user));
             navigate("/cars");
           }
         } else {
@@ -77,7 +77,7 @@ const Login = () => {
           const user = { ...validUser };
           delete user.password;
           localStorage.setItem("userId", JSON.stringify(user.id));
-          dispatch(login(user));
+          dispatch(loginUser(user));
           navigate("/cars");
         }
       } else {
