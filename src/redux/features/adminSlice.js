@@ -5,11 +5,12 @@ import { endpoints } from "../../constants";
 const adminId = localStorage.getItem("adminId");
 const initialState = { admin: null };
 if (JSON.parse(adminId)) {
-  const admin = await controller.getOne(endpoints.users, JSON.parse(adminId));
-  if (admin?.id) {
-    delete admin.password;
-    initialState.admin = { ...admin };
-  }
+  controller.getOne(endpoints.users, JSON.parse(adminId)).then((admin) => {
+    if (admin?.id) {
+      delete admin.password;
+      initialState.admin = { ...admin };
+    }
+  });
 } else {
   localStorage.setItem("adminId", JSON.stringify(null));
 }
